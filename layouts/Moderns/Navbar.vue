@@ -17,16 +17,10 @@
         <p class="text-gray-600">60160022</p>
       </div>
       <vs-dropdown>
-        <!-- <vs-button
-          class="btn-drop"
-          type="filled"
-          icon="expand_more"
-        ></vs-button> -->
         <vs-avatar
           size="large"
           src="https://www.biography.com/.image/t_share/MTE4MDAzNDEwNzg5ODI4MTEw/barack-obama-12782369-1-402.jpg"
         />
-        <!-- <a href="#">Hola mundo</a> -->
 
         <vs-dropdown-menu>
           <vs-dropdown-item> My Profile </vs-dropdown-item>
