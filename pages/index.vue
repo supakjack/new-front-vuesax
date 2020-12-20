@@ -3,11 +3,12 @@
     <div>
       <vs-row vs-justify="center">
         <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="6">
-          <vs-card>
+          <vs-card :actionable="true">
             <div slot="header">
               <h3>Hello world !</h3>
             </div>
             <div>
+              <ButtonTestAuth />
               <span
                 >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -37,7 +38,7 @@
     <div>
       <vs-row vs-justify="center">
         <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="6">
-          <vs-card class="cardx">
+          <vs-card class="cardx" :actionable="true">
             <div slot="header">
               <h3>Hello world !</h3>
             </div>
@@ -71,63 +72,23 @@
         </vs-col>
       </vs-row>
     </div>
-    <div>
-      <vs-row vs-justify="center">
-        <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="6">
-          <vs-card actionable class="cardx">
-            <div slot="header">
-              <h3>Hello world !</h3>
-            </div>
-            <div slot="media">
-              <img src="https://lusaxweb.github.io/vuesax/card2.png" />
-            </div>
-            <div>
-              <span
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit</span
-              >
-            </div>
-            <div slot="footer">
-              <vs-row vs-justify="flex-end">
-                <vs-button color="primary" type="gradient">View</vs-button>
-                <vs-button color="danger" type="gradient">Delete</vs-button>
-              </vs-row>
-            </div>
-          </vs-card>
-        </vs-col>
-        <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="6">
-          <vs-card actionable class="cardx">
-            <div slot="header">
-              <h3>Hello world !</h3>
-            </div>
-            <div slot="media">
-              <img src="https://lusaxweb.github.io/vuesax/card2.png" />
-            </div>
-            <div>
-              <span
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit</span
-              >
-            </div>
-            <div slot="footer">
-              <vs-row vs-justify="flex-end">
-                <vs-button color="primary" type="gradient">View</vs-button>
-                <vs-button color="danger" type="gradient">Delete</vs-button>
-              </vs-row>
-            </div>
-          </vs-card>
-        </vs-col>
-      </vs-row>
-    </div>
+    <div></div>
   </div>
 </template>
 
 <script>
 import breadcrumb from '@/mixins/states/breadcrumb'
+import ButtonTestAuth from '@/components/ButtonTestAuth'
 
 export default {
   layout: 'modern',
   mixins: [breadcrumb],
+  components: {
+    ButtonTestAuth
+  },
   mounted() {
-    console.log(this.breadcrumb)
+    console.log(this.$auth)
+    console.log(this.$axios)
   }
 }
 </script>

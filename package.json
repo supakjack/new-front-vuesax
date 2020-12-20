@@ -10,7 +10,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/auth-next": "^5.0.0-1608461079.ae1e5db",
+    "@nuxtjs/axios": "^5.12.4",
     "core-js": "^3.6.5",
     "material-icons": "^0.5.1",
     "nuxt": "^2.14.6",

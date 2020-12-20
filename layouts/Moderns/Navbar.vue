@@ -29,7 +29,7 @@
             <vs-dropdown-item> option 2 </vs-dropdown-item>
           </vs-dropdown-group>
           <vs-dropdown-item divider>
-            <div class="flex flex-row ...">
+            <div class="flex flex-row" @click="logout">
               <div><vs-icon icon="exit_to_app" color="#BC1254"></vs-icon></div>
               <div><span> Logout </span></div>
             </div>
@@ -42,7 +42,12 @@
 <script>
 import layout from '@/mixins/states/layout'
 export default {
-  mixins: [layout]
+  mixins: [layout],
+  methods: {
+    async logout() {
+      await this.$auth.logout()
+    }
+  }
 }
 </script>
 

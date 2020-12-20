@@ -1,7 +1,7 @@
 <template>
   <vs-row vs-justify="center" class="mt-3">
     <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="11">
-      <vs-card>
+      <vs-card :actionable="true">
         <h3>
           <vs-breadcrumb align="left" separator="chevron_right">
             <ol class="breadcrumb">
