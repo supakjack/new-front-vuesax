@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-full">
     <vs-navbar class="nabarx">
       <div slot="title">
         <vs-navbar-title> CIA. USA </vs-navbar-title>

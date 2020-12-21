@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import auth from '@/mixins/apis/auth'
+import auth from '@/mixins/apis/tests/auth'
 export default {
   mixins: [auth]
 }

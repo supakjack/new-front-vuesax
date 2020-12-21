@@ -2,15 +2,15 @@
   <div>
     <Navbar />
     <Breadcrumb />
-    <vs-row vs-justify="center">
+    <vs-row vs-justify="center" class="h-screen">
       <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="11">
+        <Sidebar />
         <div>
           <Nuxt />
         </div>
       </vs-col>
+      <Footer />
     </vs-row>
-    <Sidebar />
-    <Footer />
   </div>
 </template>
 <script>
