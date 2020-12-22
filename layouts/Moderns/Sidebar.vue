@@ -9,39 +9,28 @@
       v-model="activeSidebar"
     >
       <div class="header-sidebar" slot="header">
-        <vs-avatar
-          size="70px"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPlcPHWk3qc3xi9HpHsEkke_4hQEt2XohzMg&usqp=CAU"
-        />
+        <vs-avatar size="70px" :src="headerSidebarPicture" />
 
         <h4>Learn Programming Platform</h4>
       </div>
-      <vs-sidebar-group title="Aplication">
-        <vs-sidebar-item index="1" icon="question_answer">
-          Dashboard
-        </vs-sidebar-item>
-        <vs-sidebar-group title="Store">
-          <vs-sidebar-item index="2.1" icon="store"> Store </vs-sidebar-item>
-          <vs-sidebar-item index="2.2" icon="nature_people">
-            Nature
+
+      <div
+        v-for="item in require('@/layouts/Moderns/sidebarList')"
+        :key="item.index"
+      >
+        <vs-sidebar-group v-if="item.group" :title="item.group">
+          <vs-sidebar-item
+            v-for="item in item.list"
+            :key="item.index"
+            :index="uniqId"
+            :icon="item.icon"
+          >
+            {{ item.title }}
           </vs-sidebar-item>
-          <vs-sidebar-item index="2.3" icon="style"> Style </vs-sidebar-item>
         </vs-sidebar-group>
-        <vs-sidebar-item index="2" icon="gavel"> History </vs-sidebar-item>
-        <vs-sidebar-item index="3" icon="https"> security </vs-sidebar-item>
-        <vs-sidebar-item index="4" icon="help"> Help </vs-sidebar-item>
-      </vs-sidebar-group>
-
-      <vs-divider icon="person" position="left"> User </vs-divider>
-
-      <vs-sidebar-item index="5" icon="verified_user">
-        Configurations
-      </vs-sidebar-item>
-      <vs-sidebar-item index="6" icon="account_box"> Profile </vs-sidebar-item>
-
-      <div class="footer-sidebar" slot="footer">
-        <vs-button icon="reply" color="danger" type="flat">log out</vs-button>
-        <vs-button icon="settings" color="primary" type="border"></vs-button>
+        <vs-sidebar-item v-else :index="uniqId" :icon="item.icon">
+          {{ item.title }}
+        </vs-sidebar-item>
       </div>
     </vs-sidebar>
   </div>
@@ -49,8 +38,20 @@
 
 <script>
 import layout from '@/mixins/states/layout'
+import { nanoid } from 'nanoid'
 export default {
-  mixins: [layout]
+  mixins: [layout],
+  data() {
+    return {
+      headerSidebarPicture:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPlcPHWk3qc3xi9HpHsEkke_4hQEt2XohzMg&usqp=CAU'
+    }
+  },
+  computed: {
+    uniqId() {
+      return nanoid(4)
+    }
+  }
 }
 </script>
 
