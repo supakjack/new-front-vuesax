@@ -41,32 +41,32 @@ export default {
     middleware: ['auth']
   },
 
-  auth: {
-    cookie: {
-      prefix: 'token'
-    },
-    localStorage: false,
-    strategies: {
-      local: {
-        token: {
-          required: true,
-          type: 'Bearer'
-        },
-        endpoints: {
-          login: {
-            url: 'auth/login',
-            method: 'post',
-            propertyName: 'data.token'
-          },
-          logout: false,
-          user: false
-        }
-      }
-    },
-    redirect: {
-      login: '/login',
-      logout: '/login',
-      home: '/'
-    }
-  }
+  // auth: {
+  //   cookie: {
+  //     prefix: 'token'
+  //   },
+  //   localStorage: false,
+  //   strategies: {
+  //     local: {
+  //       token: {
+  //         required: true,
+  //         type: 'Bearer'
+  //       },
+  //       endpoints: {
+  //         login: {
+  //           url: 'auth/login',
+  //           method: 'post',
+  //           propertyName: 'data.token'
+  //         },
+  //         logout: false,
+  //         user: false
+  //       }
+  //     }
+  //   },
+  //   redirect: {
+  //     login: '/login',
+  //     logout: '/login',
+  //     home: '/'
+  //   }
+  // }
 }
