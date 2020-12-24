@@ -9,13 +9,13 @@
       :data="users"
     >
       <template slot="header">
-        <h3>ผู้ใช้งาน</h3>
+        <h3>Users</h3>
       </template>
       <template slot="thead">
-        <vs-th sort-key="email"> รหัสนิสิต </vs-th>
-        <vs-th sort-key="username"> ชื่อ - นามสกุล </vs-th>
-        <vs-th sort-key="website"> สถานะ </vs-th>
-        <vs-th sort-key="id"> ดำเนินการ </vs-th>
+        <vs-th sort-key="email"> Email </vs-th>
+        <vs-th sort-key="username"> Name </vs-th>
+        <vs-th sort-key="website"> Website </vs-th>
+        <vs-th sort-key="id"> Nro </vs-th>
       </template>
 
       <template slot-scope="{ data }">
@@ -30,11 +30,11 @@
           </vs-td>
 
           <vs-td :data="data[indextr].id">
-            <vs-chip transparent color="success"> พร้อมใช้งาน </vs-chip>
+            {{ data[indextr].website }}
           </vs-td>
 
           <vs-td :data="data[indextr].id">
-            <vs-button color="warning" type="filled">แก้ไข</vs-button>
+            {{ data[indextr].id }}
           </vs-td>
         </vs-tr>
       </template>
@@ -52,22 +52,22 @@ export default {
       {
         id: 1,
         name: 'Leanne Graham',
-        username: 'นายสมชาย รักชาติ',
-        email: '60160025',
+        username: 'Bret',
+        email: 'Sincere@april.biz',
         website: 'hildegard.org'
       },
       {
         id: 2,
         name: 'Ervin Howell',
-        username: 'นางสาวสมหญิง รักชาติ',
-        email: '60160026',
+        username: 'Antonette',
+        email: 'Shanna@melissa.tv',
         website: 'anastasia.net'
       },
       {
         id: 3,
         name: 'Clementine Bauch',
-        username: 'นายสมศรี รักชาติ',
-        email: '60160027',
+        username: 'Samantha',
+        email: 'Nathan@yesenia.net',
         website: 'ramiro.info'
       },
       {

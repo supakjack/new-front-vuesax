@@ -3,21 +3,7 @@ export const state = () => ({
   authenticated: null,
   breadcrumb: [
     {
-      title: 'Dashboard',
-      url: '/home'
-    },
-    {
-      title: 'Link 1',
-      url: '/home'
-    },
-    {
-      title: 'Link 2',
-      disabled: true,
-      url: '/home'
-    },
-    {
-      title: 'Active',
-      active: true,
+      title: 'Accounts',
       url: '/home'
     }
   ]
